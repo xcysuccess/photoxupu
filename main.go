@@ -7,12 +7,7 @@ import (
 )
 
 func main() {
-	defer order.Close_databases()
-	order.Connect_databases()
-	order.Select_Users()
-	//order.Insert_User()
-	//order.Update_User()
-	order.Delete_User()
+	gorm()
 	r := gin.Default()
 	r.GET("/", func(c *gin.Context) {
 		c.JSON(200, gin.H{
@@ -20,4 +15,13 @@ func main() {
 		})
 	})
 	r.Run() // listen and serve on 0.0.0.0:8080
+}
+
+func gorm() {
+	defer order.Close_databases()
+	order.Connect_databases()
+	order.Select_Users()
+	//order.Insert_User()
+	//order.Update_User()
+	//order.Delete_User()
 }
