@@ -1,12 +1,12 @@
 FROM csighub.tencentyun.com/medipedia/medi-saas-go:latest
 
 RUN mkdir -p /app/logs/
-ADD photoxupu /usr/local/services/photoxupu/
+ADD sql-operator /usr/local/services/sql-operator/
 COPY script/supervisord.ini /etc/supervisord.d/
 COPY script/kick_start.sh /etc/kickStart.d/
 
 # 创建存放导入文件的目录
-RUN mkdir -p /usr/local/services/photoxupu/importfile
+RUN mkdir -p /usr/local/services/sql-operator/importfile
 # fix a protocol buffer namespace conflict
 ENV GOLANG_PROTOBUF_REGISTRATION_CONFLICT warn
 

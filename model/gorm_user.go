@@ -4,7 +4,7 @@ import (
 	"database/sql"
 )
 
-type User struct {
+type User_Gorm struct {
 	UserId    int          `gorm:"column:user_id;type:int(11);primary_key" json:"user_id"`
 	UserName  string       `gorm:"column:user_name;type:varchar(60);NOT NULL" json:"user_name"`
 	Password  string       `gorm:"column:password;type:varchar(32)" json:"password"`
