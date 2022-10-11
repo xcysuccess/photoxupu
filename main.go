@@ -1,14 +1,13 @@
 package main
 
 import (
-	"fmt"
 	order "sql-operator/dao"
 
 	"github.com/gin-gonic/gin"
 )
 
 func main() {
-	//gorm()
+	// gorm()
 	sqlx()
 	r := gin.Default()
 	r.GET("/", func(c *gin.Context) {
@@ -23,17 +22,17 @@ func gorm() {
 	defer order.CloseGormDatabases()
 	order.ConnectGormDatabases()
 	order.SelectGormUser()
-	//order.InsertGormUser()
-	//order.UpdateGormUser()
-	//order.DeleteGormUser()
+	// order.InsertGormUser()
+	// order.UpdateGormUser()
+	// order.DeleteGormUser()
 }
 
 func sqlx() {
 	defer order.CloseSqlxDatabases()
 	order.ConnectSqlxDatabases()
-	fmt.Println("sqlx插入之前的数据如下:")
-	order.QueryUsers()
-	//order.InsertSqlxUser()
-	//order.DeleteSqlxUser()
-	//order.UpdateSqlxUser()
+	// fmt.Println("sqlx插入之前的数据如下:")
+	// order.QueryUsers()
+	// order.InsertSqlxUser()
+	// order.DeleteSqlxUser()
+	// order.UpdateSqlxUser()
 }
