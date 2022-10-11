@@ -57,7 +57,8 @@ func QueryRowUser() {
 // InsertSqlxUser TODO
 func InsertSqlxUser() {
 	_, err := db_sqlx.Exec(
-		"INSERT INTO users(user_name,password,sex,birthday,last_login,bind_phone,reg_time) VALUES (?,?,?,?,?,?,?)", "tomxiang_sqlx", "tomxiang_pwd", 1, time.Now(), time.Now(), "15817307777", time.Now())
+		"INSERT INTO users(user_name,password,sex,birthday,last_login,bind_phone,reg_time) VALUES (?,?,?,?,?,?,?)",
+		"tomxiang_sqlx", "tomxiang_pwd", 1, time.Now(), time.Now(), "15817307777", time.Now())
 	if err != nil {
 		fmt.Printf("get failed, err:%v\n", err)
 		return

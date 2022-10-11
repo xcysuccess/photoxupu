@@ -2,6 +2,7 @@ package model
 
 import "time"
 
+// User_Sqlx TODO
 type User_Sqlx struct {
 	UserId    int       `db:"user_id"`
 	UserName  string    `db:"user_name"`

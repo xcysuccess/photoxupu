@@ -4,6 +4,7 @@ import (
 	"database/sql"
 )
 
+// User_Gorm TODO
 type User_Gorm struct {
 	UserId    int          `gorm:"column:user_id;type:int(11);primary_key" json:"user_id"`
 	UserName  string       `gorm:"column:user_name;type:varchar(60);NOT NULL" json:"user_name"`
